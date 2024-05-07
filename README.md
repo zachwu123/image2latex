@@ -39,7 +39,7 @@ In the second phase, we optimize the chosen model in stage one by adjusting hype
  
  "clip": [1.0, 2.0, 3.0]
  
-**Grid Search- on Latex Generator**
+**Grid Search- on Latex Generator (Interpreter)**
 
 “Beam size”: [1,3,5,10] (1 is Greedy Search)
 
