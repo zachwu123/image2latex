@@ -50,7 +50,7 @@ The project is implemented across two Colab notebooks:
 
 ### Model Architecture Implementation: 
 
-The first notebook details the setup, training, and initial evaluation of different model configurations, and the result is as below. 
+The first notebook details the setup, training, and initial evaluation of different model configurations, and the result is as below. We selected the model of CNN with positional embedding + Bi-LSTM with Attention for futher hyper-parameter tuning.
 
 ![Image](https://github.com/users/zachwu123/projects/1/assets/166083422/900eb61f-ace0-4a3a-9597-3375b38770ff)
 
@@ -58,13 +58,18 @@ The first notebook details the setup, training, and initial evaluation of differ
 
 ### Hyper-parameter Tuning: 
 
-The second notebook focuses on refining the models by adjusting hyperparameters to optimize performance, and the result is as below. 
+The second notebook focuses on refining the models by adjusting hyperparameters to optimize performance, and the result is as below. We first conducted random search to find the best hyper-parameters for the Trainer. 
 
 ![Image](https://github.com/users/zachwu123/projects/1/assets/166083422/67921e0c-adcf-4278-9574-2f755e7ba210)
 
+![Impact of Hyper-Parameters on Best Validation Loss](https://github.com/zachwu123/image2latex/assets/166083422/1b25295d-a38b-48a0-96f0-29897ef184bc)
 
-![Image](https://github.com/users/zachwu123/projects/1/assets/166083422/b4b51a31-7df4-4741-a7d4-a1e8204d3680)
+Then, grid search is used to explore the difference between greedy search and beam search of different size. We find out that beam size of 5 generally do the best job. Also as the beam size increases, the computation and time required also generally increase. 
 
+![Edit Scores by Beam Size](https://github.com/zachwu123/image2latex/assets/166083422/f813b00e-30d6-447a-af26-c2b20fda329f)
+![BLEU-4 scores by Beam Size](https://github.com/zachwu123/image2latex/assets/166083422/9584eaef-f0b3-48ff-a6cd-d5c2f1fe6fcd)
+![Partial Match by Beam Size](https://github.com/zachwu123/image2latex/assets/166083422/4e1a8007-4777-4f3a-9075-ca19dcdeed8d)
+![Evaluation Time by Beam Size](https://github.com/zachwu123/image2latex/assets/166083422/712d778d-179e-4f1c-9f03-654c0891f329)
 
 ### Training the best model
 
