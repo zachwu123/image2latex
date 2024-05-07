@@ -14,7 +14,9 @@ The primary technical challenge is the accurate interpretation of handwritten ma
 We first experiment with various neural network architectures to find the most effective baseline for recognizing and interpreting the structure of handwritten equations. This includes:
 
 **ResNet50 with positional embedding + LSTM:** Combining ResNet50 for robust feature extraction from images with LSTM for sequence prediction.
+
 **DenseNet with positional embedding + GRU:** Using DenseNet for a denser feature perspective and GRU for handling sequence dependencies with fewer parameters than LSTM.
+
 **CNN with positional embedding + Bi-LSTM with Attention:** Introducing attention network to handle sequences where the order of elements is crucial for correct interpretation.
 
 ### Hyperparameter Tuning:
