@@ -21,7 +21,28 @@ We first experiment with various neural network architectures to find the most e
 
 ### Hyperparameter Tuning:
 
-In the second phase, we optimize the model by adjusting hyper-parameters to enhance performance. This includes tuning learning rates, dropout rates, and experimenting with different configurations of beam sizes for beam search decoding.
+In the second phase, we optimize the model by adjusting hyper-parameters to enhance performance. This includes tuning various hyper-parameters of the Trainer with random search, and experimenting with different configurations of beam sizes for beam search decoding.
+
+**Random Search- on Trainer**
+
+ "emb_dim": [50, 80, 100],
+ 
+"dec_rnn_h": [256, 512, 1024],
+
+ "dropout": [0.0, 0.1, 0.2],
+ 
+ "lr": [5e-3,1e-3,5e-4, 1e-4],
+ 
+ "lr_decay": [0.1, 0.5, 0.9],
+ 
+ "lr_patience": [2, 3, 4],
+ 
+ "clip": [1.0, 2.0, 3.0]
+ 
+**Grid Search- on Latex Generator**
+
+“Beam size”: [1,3,5,10] (1 is Greedy Search)
+
 
 ## Implementation and Experiment 
 
