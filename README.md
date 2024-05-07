@@ -21,7 +21,7 @@ We first experiment with various neural network architectures to find the most e
 
 ### Hyperparameter Tuning:
 
-In the second phase, we optimize the model by adjusting hyper-parameters to enhance performance. This includes tuning various hyper-parameters of the Trainer with random search, and experimenting with different configurations of beam sizes for beam search decoding.
+In the second phase, we optimize the chosen model in stage one by adjusting hyper-parameters to enhance performance. This includes tuning various hyper-parameters of the Trainer with random search, and experimenting with different configurations of beam sizes for beam search decoding.
 
 **Random Search- on Trainer**
 
